@@ -12,6 +12,8 @@ jobs:
   build:
     name: Build APK
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Diperlukan untuk membuat release dan mengunggah APK
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

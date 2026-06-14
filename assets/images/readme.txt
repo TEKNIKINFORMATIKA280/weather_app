@@ -1,0 +1,1 @@
+Simpan file logo_icon_weather.png di folder ini.

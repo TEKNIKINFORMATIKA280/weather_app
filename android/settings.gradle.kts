@@ -19,6 +19,7 @@ pluginManagement {
 
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
+    // KUNCI di 8.3.2, jangan pakai versi 9 yang bermasalah itu
     id("com.android.application") version "8.3.2" apply false
     id("org.jetbrains.kotlin.android") version "1.9.24" apply false
 }

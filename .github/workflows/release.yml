@@ -32,9 +32,14 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+      - name: Prepare Android Resources
+        run: |
+          mkdir -p android/app/src/main/res/drawable
+          cp assets/images/Logo_icon_weather.png android/app/src/main/res/drawable/weather_icon.png
+
       - name: Build APK
-        # Menambahkan flag skip validation agar build tidak berhenti karena masalah versi Gradle
-        run: flutter build apk --release --android-skip-build-dependency-validation
+        # Ditambahkan --verbose dan flag skip validation sesuai instruksi Anda
+        run: flutter build apk --release --android-skip-build-dependency-validation --verbose
 
       - name: Upload APK as Artifact
         uses: actions/upload-artifact@v4

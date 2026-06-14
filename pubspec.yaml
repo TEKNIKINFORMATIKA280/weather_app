@@ -1,18 +1,16 @@
 name: weather_app
-description: "Aplikasi cuaca Flutter modern dengan desain Glassmorphism, animasi Lottie, dan data cuaca real-time."
+description: "Aplikasi cuaca Flutter modern"
 publish_to: 'none'
-
 version: 3.0.0+1
 
 environment:
-  sdk: ^3.5.0 # Diubah dari ^3.12.0 agar kompatibel dengan Flutter 3.24.0
+  sdk: '>=3.5.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-
   cupertino_icons: ^1.0.8
   http: ^1.2.0
   geolocator: ^13.0.1
@@ -28,7 +26,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+  flutter_lints: 5.0.0 # DIKUNCI MATI tanpa tanda ^
 
 flutter:
   uses-material-design: true

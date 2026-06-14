@@ -13,7 +13,7 @@ jobs:
     name: Build APK
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Diperlukan untuk membuat release dan mengunggah APK
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -27,8 +27,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
-          channel: 'stable'
+          channel: 'stable' # Menghapus versi 3.24.0 agar selalu pakai yang terbaru
 
       - name: Install dependencies
         run: flutter pub get

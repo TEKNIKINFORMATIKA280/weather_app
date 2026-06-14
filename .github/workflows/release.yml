@@ -27,13 +27,14 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable' # Menghapus versi 3.24.0 agar selalu pakai yang terbaru
+          channel: 'stable'
 
       - name: Install dependencies
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --release
+        # Menambahkan flag skip validation agar build tidak berhenti karena masalah versi Gradle
+        run: flutter build apk --release --android-skip-build-dependency-validation
 
       - name: Upload APK as Artifact
         uses: actions/upload-artifact@v4

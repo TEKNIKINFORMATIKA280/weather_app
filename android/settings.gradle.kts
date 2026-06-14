@@ -19,8 +19,8 @@ pluginManagement {
 
 plugins {
     id("dev.flutter.flutter-plugin-loader") version "1.0.0"
-    // KUNCI di 8.3.2, jangan pakai versi 9 yang bermasalah itu
-    id("com.android.application") version "8.3.2" apply false
+    // Kunci di 8.6.0 agar memenuhi syarat minimal Flutter tanpa memicu error AGP 9
+    id("com.android.application") version "8.6.0" apply false
     id("org.jetbrains.kotlin.android") version "1.9.24" apply false
 }
 
